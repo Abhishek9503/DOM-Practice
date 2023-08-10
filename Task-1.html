@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Event Listeners  Practical Task-1 </title>
+</head>
+<body>
+    <button>Say HEllo!</button>
+    <script>
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function(e){
+         let ele=    document.createElement('div')
+            ele.innerText= "Hello ji!"
+
+            let body = document.querySelector('body')
+
+            body.appendChild(ele);
+
+        })
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+
+-> add addEventListener ( Browser) event like keyboard mouse event like, scroll ,click, asyc data flow
+
+->querySelector("")  -> refernce node
+-> innerText=" "   to fill any element 
+-> appendChild()   to add a element in 
+->  createElement('div')  like also span a img
+->  body.appendChild('div')
+
+ -->
+

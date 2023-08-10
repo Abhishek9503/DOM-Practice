@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 5rem;
+      }
+      .red {
+        background-color: red;
+      }
+      .card {
+        border: 1px solid;
+        height: 10rem;
+        width: 10rem;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card red"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+
+    <script>
+      // Create a genric function to select all sibling of a givern node. Using that funtion
+
+      let redElemNode = document.querySelector(".red");
+
+      let allCards= document.querySelectorAll(".card");
+
+      allCards.forEach((card)=>{
+        if(card != redElemNode) card.remove();
+      })
+      //      deleteAllSiblings(redElemNode);
+
+   
+    </script>
+  </body>
+</html>
+
+<!--
+
+
+       function deleteAllSiblings(redElem) {
+        let before = redElem.previousElementsSibling;
+        let after = redElem.nextElementSibling;
+
+        while (before) {
+          before.remove();
+          before = redElem.previousElementsSibling;
+        }
+        while (after) {
+          after.remove();
+          after = redElem.nextElementSibling;
+        }
+      }
+* Previous Elements Sibling
+
+*NExt element sibling
+
+*previous SIbling
+
+* next Sibling
+
+-->

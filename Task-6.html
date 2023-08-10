@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .cell{
+        border:  1px solid;
+        margin: auto;
+        margin-top: 10rem;
+        height: 20rem;
+        width: 20rem;
+        display: flex;
+    }
+</style>
+<body>
+
+    <div class="cell"></div>
+
+    <script>
+        //Jail the mouse
+        //
+        let  cell= document.querySelector(".cell")
+
+        cell.addEventListener("mouseenter", (e)=>{
+            cell.style.backgroundImage = "url(./ab.jpg)  " 
+        })
+
+
+        cell.addEventListener("mouseleave", (e)=>{
+            cell.style.backgroundImage ="none";
+        })
+
+    </script>
+    
+</body>
+</html>
